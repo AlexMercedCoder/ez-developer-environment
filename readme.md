@@ -23,7 +23,9 @@ Make sure to edit the command below with your gitusername and email
 **Build Command**
 
 ```
-docker build -it --build-arg gitusername="Your Name" --build-arg gitemail="Your@email.com" .
+docker build -my_dev_environ --build-arg gitusername="Your Name" --build-arg gitemail="Your@email.com" .
+
+docker run -it my_dev_environ
 ```
 
 ## Setting up the environment using Docker-Compose

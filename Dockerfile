@@ -22,7 +22,7 @@ ARG gitemail
 ENV gitun=$gitusername
 ENV gitemail=$gitemail
 RUN git config --global user.name "$gitun"
-RUN git config --global user.email $gitemail
+RUN git config --global user.email "$gitemail"
 
 ## Install Ruby (Will install 2.7)
 RUN sudo apt install ruby-full -y
@@ -50,7 +50,9 @@ RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 RUN sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 ## Insall Coursier
-RUN curl -Lo cs https://git.io/coursier-cli-linux && sudo chmod +x cs && ./cs setup -y
+RUN curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
+RUN sudo chmod +x cs 
+RUN ./cs setup -y
 RUN ./cs install scala3
 RUN ./cs install scala3-compiler
 RUN echo 'PATH=$PATH:~/.local/share/coursier/bin' >> ~/.bashrc
