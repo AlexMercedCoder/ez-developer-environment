@@ -1,3 +1,5 @@
+[VIDEO OVERVIEW OF USING DOCKER IMAGE FROM DOCKER HUB](https://youtu.be/mN5UHsMNm4U)
+
 ## Developer Environment with Docker
 
 The `Dockerfile` and `docker-compose.yml` are meant to help create an easy to replicate and portable developer environment with the following languages.
