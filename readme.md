@@ -70,5 +70,13 @@ If you want to turn on the services individually incase you don't need all three
 to turn off
 
 - `docker-compose down languages`
-- `docker-compose down up postgres`
-- `docker-compose down up mongodb` 
+- `docker-compose down postgres`
+- `docker-compose down mongodb` 
+
+## Running Single Commands
+
+If you just wanted to run a single command against a container, follow this example where we run bash in the languages container.
+
+```
+docker-container run languages /bin/bash/
+```
