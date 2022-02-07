@@ -63,5 +63,8 @@ RUN curl -fsSL https://deno.land/install.sh | sh
 RUN echo 'DENO_INSTALL="/home/developer/.deno"' >> ~/.bashrc
 RUN echo 'PATH="$DENO_INSTALL/bin:$PATH"' >> ~/.bashrc
 
+## Install Nano + VIM for editing
+RUN sudo apt-get install nano vim -y
+
 ## Start Container
 ENTRYPOINT bash
